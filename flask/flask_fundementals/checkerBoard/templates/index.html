@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" 
+    href="{{ url_for('static', filename='css/my_style.css') }}">
+    <title>Basic</title>
+</head>
+<body>
+    {% for i in range(8) %}
+        {% for j in range(4) %}
+            {%if i%2 == 0 %}
+            <div class="red"></div>
+            <div class="blue"></div>
+            {%else%}
+            <div class="blue"></div>
+            <div class="red"></div>
+            {%endif%}
+        {% endfor %}
+    <br>
+    {% endfor %}
+</body>
+</html>
