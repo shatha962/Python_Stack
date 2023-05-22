@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
+</head>
+<body>
+    <form action="/result" method="post">
+        <div>
+            <label for="name">Your Name: </label>
+            <input type="text" name="name">
+        </div> 
+        <div>
+        <label for="location">Dojo Location: </label>
+        <select name="location" id="">
+            <option value="Ramallah">Ramallah</option>
+            <option value="Nablus">Nablus</option>
+            <option value="Hebron">Hebron</option>
+        </select>
+        </div> 
+        <div>
+        <label for="language">Favorite Language: </label>
+        <select name="language" id="">
+            <option value="JS">JS</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+        </select>
+        </div> 
+        <div>
+        <label for="comment">Comment: </label>
+        <textarea name="comment" id="" cols="30" rows="10">
+        </textarea>
+        </div> 
+        <div>
+            <label for="gender">Gender: </label>
+            <input type="radio" name="gender" value="Male" id="">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="Female"id="">
+            <label for="female">Female</label>
+        </div>
+        <div>
+            <input type="checkbox" name="done" value="Done" id="">
+            <label for="done">Done</label>
+        </div>
+        <input type="submit" value="Button">
+    </form>
+</body>
+</html>
