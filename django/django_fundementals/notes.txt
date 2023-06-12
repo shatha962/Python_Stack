@@ -11,3 +11,4 @@ urlpatterns = [
     path('', views.index),	   
 ]
  python manage.py runserver
+python manage.py migrate
