@@ -1,0 +1,13 @@
+django-admin startproject your_project_name_here
+your_project_name_here> python manage.py startapp your_app_name_here
+project/urls.py> from django.urls import path, include   
+urlpatterns = [
+    path('', include('your_app_name_here.urls')),	   
+    # path('admin/', admin.sites.urls)         # comment out, or just delete
+]
+app/urls.py> from django.urls import path     
+from . import views
+urlpatterns = [
+    path('', views.index),	   
+]
+ python manage.py runserver
