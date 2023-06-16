@@ -11,4 +11,7 @@ urlpatterns = [
     path('', views.index),	   
 ]
  python manage.py runserver
-python manage.py migrate
+
+1.python manage.py makemigrations// to create tables
+2.python manage.py migratse // to use session
+3. python manage.py shell
