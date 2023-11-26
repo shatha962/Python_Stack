@@ -10,8 +10,9 @@ from . import views
 urlpatterns = [
     path('', views.index),	   
 ]
- python manage.py runserver
+python manage.py runserver
 
 1.python manage.py makemigrations// to create tables
-2.python manage.py migratse // to use session
+2.python manage.py migrate // to use session
 3. python manage.py shell
+4.pip install bcrypt

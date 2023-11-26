@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold Game</title>
+</head>
+<body>
+    <h3 style="display: inline;">Your Gold</h3>
+    <input type="text" name="gold" id="gold" value={{request.session.gold}} disabled >
+    <!-- <div>
+        <h3>Farm</h3>
+        <p>(earn 10-20 gold)</p>
+        <form action="/" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="action" value="farm">
+            <input type="submit" value="Find Gold!">
+        </form>
+    </div>
+    <div>
+        <h3>Cave</h3>
+        <p>(earn 10-20 gold)</p>
+        <form action="/" method="post">
+            <input type="hidden" name="action" value="cave">
+            {% csrf_token %}
+            <input type="submit" value="Find Gold!">
+        </form>
+    </div>
+    <div>
+        <h3>House</h3>
+        <p>(earn 10-20 gold)</p>
+        <form action="/" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="action" value="house">
+            <input type="submit" value="Find Gold!">
+        </form>
+    </div>
+    <div>
+        <h3>Quest</h3>
+        <p>(earn/takes 0-50)</p>
+        <form action="/" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="action" value="quest">
+            <input type="submit" value="Find Gold!">
+        </form>
+    </div> -->
+    <form method="post" action="/">
+        {% csrf_token %}
+        <input type="submit" name="action" value="farm">
+        <input type="submit" name="action" value="cave">
+        <input type="submit" name="action" value="house">
+        <input type="submit" name="action" value="quest">
+    </form>
+    <div>
+        {% for activity in request.session.activities %}
+            <p style="color: {{activity.color}};"> {{activity.text}}</p>
+
+        {% endfor %}
+    </div>
+    <form action="/replay" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Replay!">
+    </form>
+</body>
+</html>

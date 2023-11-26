@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Number Game</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>Take a guess</p>
+
+    <form action="/process" method="post">
+        {% csrf_token %}
+        <input type="text" name="number" id="number">
+        <input type="submit" value="submit">
+    </form>
+
+    <div style="background-color: {{color}};">
+        <h2>{{text}}</h2>
+    </div>
+
+    {% if color == "green" %}
+    <button>Replay</button>
+    {% endif %}
+</body>
+</html>
